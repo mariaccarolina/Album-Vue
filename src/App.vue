@@ -1,17 +1,19 @@
 <template>
   <main>
-        <!-- A interpolação é usada para exibir dados dinamicos no HTML {{  }} -->
+    <!-- A interpolação é usada para exibir dados dinamicos no HTML {{  }} -->
     <h1>{{ titulo }}</h1>
     <ul>
+      <!-- a diretiva v-for é usada para renderizar uma lista de itens com base um uma array ou objeto. -->
       <li v-for="foto of fotos">
-        <img :src="foto.url" :alt="foto.titulo">
-         <!-- dentro de um atributo não podemos usar a interpolação -->
+        <img :src="foto.url" :alt="foto.titulo" />
+        <!-- dentro de um atributo não podemos usar a interpolação -->
         <!--  o data binding é o processo de ligar dados entre lógica do aplicativo e o template -->
         <!--No Vue existem as diretivas que são descritas com o `v-`  -->
         <!-- Diretiva é um atributo especial que adiciona funcionalidade aos elementos do DOM. -->
-         <!-- A diretiva v-bind faz uma interpolação dentro de um atributo. -->
-          <!--  <img v-bind:src="foto.url" v-bind:alt="foto.titulo"> -->
-            <!-- mas a uma forma mais simples de usar a diretiva v-bind que é usar o : antes do atributo, como no exemplo usado na tag acima. -->
+        <!-- uma diretiva faz Manipulação de atributos, classes, estilos, eventos e controle de renderização condicional. -->
+        <!-- A diretiva v-bind faz uma interpolação dentro de um atributo. -->
+        <!--  <img v-bind:src="foto.url" v-bind:alt="foto.titulo"> -->
+        <!-- mas a uma forma mais simples de usar a diretiva v-bind que é usar o : antes do atributo, como no exemplo usado na tag acima. -->
       </li>
     </ul>
   </main>
